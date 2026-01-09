@@ -7,11 +7,6 @@ function fail() {
   exit 1
 }
 
-# Extract the link to a svg badge from a line of README.
-function badge_svg() {
-  grep -o '(http[^)]*svg[^)]*)' | sed -e 's/(//;s/)//'
-}
-
 function check_plugins_from_diff() {
   local BASE_REF="$1" # Base commit of main branch.
   local HEAD_REF="$2" # Latest commit of PR
@@ -24,7 +19,7 @@ function check_plugins_from_diff() {
     test 1 -lt "$(echo "$DIFF_CHANGES" | wc --lines | xargs)" &&
       echo "$DIFF_CHANGES" | grep README.md >/dev/null &&
       echo "$DIFF_CHANGES" | grep plugins/ >/dev/null
-  } || fail "Expected git diff ${REF_RANGE} to only include changes for a single plugin"
+  } || fail "Expected git diff ${BASE_REF}..${HEAD_REF} to only include changes for a single plugin"
 
   local PLUGIN_FILES
   PLUGIN_FILES="$(git diff --name-only "${BASE_REF}" "${HEAD_REF}" -- plugins/)"
@@ -111,7 +106,7 @@ else
 Test that a plugin at PLUGIN_FILE follows basic sanity checks:
   * A plugins/<plugin> file contains the repository url.
   * A new line is added on README.md with a link mentioning the plugin.
-  * The new plugin has CI badge and it's passing.
+  * The plugin repository is reachable via git.
 
 Usage:
 
