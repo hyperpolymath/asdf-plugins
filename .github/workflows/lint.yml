@@ -1,6 +1,8 @@
 # SPDX-License-Identifier: PMPL-1.0-or-later
 name: lint
 
+permissions: read-all
+
 on:
   push:
     branches:
@@ -12,10 +14,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4
 
       - name: Install asdf dependencies
-        uses: asdf-vm/actions/install@v3
+        uses: asdf-vm/actions/install@b7bcd026f18772e44fe1026d729e1611cc435d47 # v4
 
       - name: lint
         run: scripts/lint.bash
@@ -24,7 +26,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4
 
       - name: Check workflow files
         uses: docker://rhysd/actionlint:1.6.23
