@@ -1,0 +1,138 @@
+#Start(1769800611781)
+
+  Warning number 3
+  /var/mnt/eclipse/repos/asdf-plugins/src/Tea.res:21:50-62
+
+  19 ┆ 
+  20 ┆ @val external document: 'a = "document"
+  21 ┆ @send external getElementById: ('a, string) => Js.Nullable.t<Dom.elemen
+     ┆ t> = "getElementById"
+  22 ┆ @set external setInnerHTML: (Dom.element, string) => unit = "innerHTML"
+  23 ┆ 
+
+  deprecated: Js.Nullable.t
+  Use `Nullable.t` instead.
+
+  This can be automatically migrated by the ReScript migration tool. Run `rescript-tools migrate-all <project-root>` to run all automatic migrations available in your project, or `rescript-tools migrate <file>` to migrate a single file.
+
+
+  Warning number 3
+  /var/mnt/eclipse/repos/asdf-plugins/src/Tea.res:64:59-78
+
+  62 ┆ 
+  63 ┆ // Mount to DOM
+  64 ┆ switch Html.document->Html.getElementById("tea-app")->Js.Nullable.toOpt
+     ┆ ion {
+  65 ┆ | Some(el) => el->Html.setInnerHTML(Obj.magic(html))
+  66 ┆ | None => Js.log("TEA mount point #tea-app not found")
+
+  deprecated: Js.Nullable.toOption
+  Use `Nullable.toOption` instead.
+
+  This can be automatically migrated by the ReScript migration tool. Run `rescript-tools migrate-all <project-root>` to run all automatic migrations available in your project, or `rescript-tools migrate <file>` to migrate a single file.
+
+
+  Warning number 3
+  /var/mnt/eclipse/repos/asdf-plugins/src/Tea.res:66:15-20
+
+  64 ┆   switch Html.document->Html.getElementById("tea-app")->Js.Nullable.toO
+     ┆ ption {
+  65 ┆   | Some(el) => el->Html.setInnerHTML(Obj.magic(html))
+  66 ┆   | None => Js.log("TEA mount point #tea-app not found")
+  67 ┆   }
+  68 ┆ }
+
+  deprecated: Js.log
+  Use `Console.log` instead.
+
+  This can be automatically migrated by the ReScript migration tool. Run `rescript-tools migrate-all <project-root>` to run all automatic migrations available in your project, or `rescript-tools migrate <file>` to migrate a single file.
+
+
+  Warning number 27
+  /var/mnt/eclipse/repos/asdf-plugins/src/Tea.res:28:57-64
+
+  26 ┆ let text = (str: string): node => Obj.magic(str)
+  27 ┆ 
+  28 ┆ let tag = (tagName: string, _attrs: array<attribute>, children: array<n
+     ┆ ode>): node => {
+  29 ┆   // Use raw JavaScript to concatenate children
+  30 ┆   let childrenHtml: string = %raw(`
+
+  unused variable children.
+
+Fix this by:
+- Deleting the variable if it's not used anymore.
+- Prepending the variable name with `_` (like `_children`) to ignore that the variable is unused.
+- Using the variable somewhere.
+
+
+  Warning number 27
+  /var/mnt/eclipse/repos/asdf-plugins/src/AsdfApp.res:40:22-28
+
+  38 │ ]
+  39 │ 
+  40 │ let filterPlugins = (plugins: array<plugin>, query: string, lang: optio
+     │ n<string>): array<plugin> => {
+  41 │   // Use raw JavaScript for filtering
+  42 │   let langStr = switch lang {
+
+  unused variable plugins.
+
+Fix this by:
+- Deleting the variable if it's not used anymore.
+- Prepending the variable name with `_` (like `_plugins`) to ignore that the variable is unused.
+- Using the variable somewhere.
+
+
+  Warning number 27
+  /var/mnt/eclipse/repos/asdf-plugins/src/AsdfApp.res:40:46-50
+
+  38 │ ]
+  39 │ 
+  40 │ let filterPlugins = (plugins: array<plugin>, query: string, lang: optio
+     │ n<string>): array<plugin> => {
+  41 │   // Use raw JavaScript for filtering
+  42 │   let langStr = switch lang {
+
+  unused variable query.
+
+Fix this by:
+- Deleting the variable if it's not used anymore.
+- Prepending the variable name with `_` (like `_query`) to ignore that the variable is unused.
+- Using the variable somewhere.
+
+
+  Warning number 26
+  /var/mnt/eclipse/repos/asdf-plugins/src/AsdfApp.res:42:7-13
+
+  40 │ let filterPlugins = (plugins: array<plugin>, query: string, lang: optio
+     │ n<string>): array<plugin> => {
+  41 │   // Use raw JavaScript for filtering
+  42 │   let langStr = switch lang {
+  43 │   | None => ""
+  44 │   | Some(l) => l
+
+  unused variable langStr.
+
+Fix this by:
+- Deleting the variable if it's not used anymore.
+- Prepending the variable name with `_` (like `_langStr`) to ignore that the variable is unused.
+- Using the variable somewhere.
+
+
+  Warning number 3
+  /var/mnt/eclipse/repos/asdf-plugins/src/ProvenSafeUrl.res:36:47-55
+
+  34 ┆ 
+  35 ┆ @module("proven/safe_url") @scope("SafeUrl")
+  36 ┆ external getQueryParams: string => jsResult<Js.Dict.t<string>> = "getQu
+     ┆ eryParams"
+  37 ┆ 
+  38 ┆ @module("proven/safe_url") @scope("SafeUrl")
+
+  deprecated: Js.Dict.t
+  Use `dict` directly instead.
+
+  This can be automatically migrated by the ReScript migration tool. Run `rescript-tools migrate-all <project-root>` to run all automatic migrations available in your project, or `rescript-tools migrate <file>` to migrate a single file.
+
+#Done(1769800611849)

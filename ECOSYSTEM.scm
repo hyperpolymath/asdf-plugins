@@ -1,28 +1,7 @@
-;; SPDX-License-Identifier: AGPL-3.0-or-later
-;; ECOSYSTEM.scm - Ecosystem relationships for asdf-plugins
-;; Media-Type: application/vnd.ecosystem+scm
-
+;; ECOSYSTEM.scm - asdf-plugins relationships
 (ecosystem
-  (version "1.0.0")
   (name "asdf-plugins")
-  (type "library")  ;; or: application, tool, specification, template
-  (purpose "Hyperpolymath ecosystem component")
-
-  (position-in-ecosystem
-    "Part of the hyperpolymath ecosystem of 500+ repositories "
-    "following Rhodium Standard Repository (RSR) conventions.")
-
+  (type "search-site")
   (related-projects
-    ;; Examples - customize based on actual relationships:
-    ;; (sibling-standard "rsr-template-repo" "Template for new repos")
-    ;; (dependency "hypatia" "Security scanning")
-    ;; (consumer "gitbot-fleet" "Quality enforcement")
-    )
-
-  (what-this-is
-    "A component of the hyperpolymath ecosystem. "
-    "[TODO: Add specific description]")
-
-  (what-this-is-not
-    "This is not a standalone project - it integrates with "
-    "the broader hyperpolymath tooling ecosystem."))
+    (project "rescript-tea" (relationship "sibling-standard"))
+    (project "proven" (relationship "sibling-standard"))))

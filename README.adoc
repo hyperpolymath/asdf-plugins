@@ -1,0 +1,33 @@
+image:https://img.shields.io/badge/License-MPL_2.0-blue.svg[MPL-2.0-or-later]
+image:https://img.shields.io/badge/Idris-Inside-5E5086[Idris Inside,link="https://github.com/hyperpolymath/proven"]
+
+= asdf-plugins
+:toc: auto
+
+Plugin search and filtering for asdf version manager, built with ReScript, Deno, and formally verified components.
+
+== Architecture
+
+* *ReScript* - Type-safe compilation
+* *Deno* - Modern runtime (no Node.js)
+* *proven* - Formally verified URL validation for plugin repos
+* *TEA* - State management
+
+== Development
+
+[source,bash]
+----
+deno task build
+deno task watch
+----
+
+== Status (2026-01-30)
+
+* ✅ Deno + ReScript configured
+* ✅ proven integration
+* ✅ Security hardening
+* ⏳ Full UI implementation
+
+== License
+
+PMPL-1.0-or-later
