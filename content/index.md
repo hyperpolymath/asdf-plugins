@@ -1,12 +1,16 @@
 ---
-title: asdf Plugin Registry - Hyperpolymath Fork
+title: asdf Plugin Registry
 description: Curated registry of asdf version manager plugins with 844+ tools
 date: 2026-01-30
+license: PMPL-1.0-or-later
 ---
 
 # asdf Plugin Registry
 
-**Hyperpolymath's curated fork of the official asdf-vm plugin registry**
+**Curated fork of the official asdf-vm plugin registry**
+
+![License: PMPL-1.0](https://img.shields.io/badge/License-PMPL--1.0-indigo.svg)
+![Plugins: 844+](https://img.shields.io/badge/Plugins-844%2B-blue.svg)
 
 The purpose of the [asdf](https://github.com/asdf-vm/asdf) plugins repository is to enable shorthand installation of plugins with:
 
@@ -24,9 +28,9 @@ asdf plugin add <name> <git_url>
 
 ## About This Fork
 
-This is a fork of [asdf-vm/asdf-plugins](https://github.com/asdf-vm/asdf-plugins) maintained by Hyperpolymath. We maintain:
+This is a fork of [asdf-vm/asdf-plugins](https://github.com/asdf-vm/asdf-plugins) maintained by Jonathan D.A. Jewell. This fork includes:
 
-- **RSR compliance** - All hyperpolymath plugins follow Rhodium Standard Repositories
+- **RSR compliance** - All custom plugins follow Rhodium Standard Repositories
 - **Security scanning** - Hypatia neurosymbolic CI/CD scans all plugins
 - **Custom plugins** - Additional plugins for niche languages and tools
 
@@ -38,7 +42,7 @@ This registry contains **844+ plugins** covering languages, databases, CLIs, and
 
 - Read the [creating plugins guide](https://github.com/asdf-vm/asdf/blob/master/docs/plugins/create.md)
 - Consider using the [Template](https://github.com/asdf-vm/asdf-plugin-template) which has core functionality out of the box
-- For hyperpolymath plugins, follow the [RSR template](https://github.com/hyperpolymath/rsr-template-repo)
+- For custom plugins, follow the [RSR template](https://github.com/hyperpolymath/rsr-template-repo)
 
 ### asdf-community
 
@@ -68,9 +72,9 @@ asdf plugin update <name> <git-ref>
 
 However, running `asdf plugin update <name>` or `asdf plugin update --all` will change the SHA you have pinned.
 
-## Hyperpolymath Plugins
+## Custom Plugins
 
-Our custom plugins include:
+Custom plugins in this fork include:
 
 - **casket-ssg** - Static site generator with formal verification
 - **acceleration-middleware** - Database query acceleration
@@ -79,7 +83,7 @@ Our custom plugins include:
 
 ## Full Plugin List
 
-See the complete list of 844+ plugins in the [GitHub repository README](https://github.com/hyperpolymath/asdf-plugins).
+See the complete list of 844+ plugins in the [GitHub repository README](https://github.com/hyperpolymath/asdf-plugins/blob/master/README.md).
 
 ## Resources
 
@@ -90,6 +94,12 @@ See the complete list of 844+ plugins in the [GitHub repository README](https://
 
 ## License
 
-See [LICENSE](https://github.com/hyperpolymath/asdf-plugins/blob/main/LICENSE) file.
+**PMPL-1.0-or-later** (Palimpsest-MPL License)
 
-Maintained by [Hyperpolymath](https://github.com/hyperpolymath) | Original by [asdf-vm](https://github.com/asdf-vm)
+This fork is licensed under the Palimpsest-MPL License. The original asdf-plugins repository is licensed under Apache-2.0.
+
+See the [Palimpsest License](https://github.com/hyperpolymath/palimpsest-license) for full details.
+
+---
+
+Maintained by [Jonathan D.A. Jewell](mailto:jonathan.jewell@open.ac.uk) | Original by [asdf-vm](https://github.com/asdf-vm) | Licensed under [PMPL-1.0-or-later](https://github.com/hyperpolymath/palimpsest-license)
