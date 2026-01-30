@@ -1,0 +1,120 @@
+---
+title: About ASDF Plugin Directory
+description: Interactive directory of asdf version manager plugins
+author: Jonathan D.A. Jewell
+date: 2026-01-30
+---
+
+# ASDF Plugin Directory
+
+An interactive, searchable directory of plugins for the [asdf version manager](https://asdf-vm.com/).
+
+## What is asdf?
+
+**asdf** is a version manager for multiple languages and tools. It provides a single CLI for managing versions of:
+
+- Programming languages (Node.js, Python, Ruby, Go, Rust, etc.)
+- Development tools (kubectl, terraform, helm, etc.)
+- Databases (PostgreSQL, Redis, MongoDB, etc.)
+- And many more...
+
+## Why Use asdf?
+
+### One Tool, Many Languages
+
+Instead of using separate version managers:
+- **nvm** for Node.js
+- **rbenv** for Ruby
+- **pyenv** for Python
+- **gvm** for Go
+
+Just use **asdf** for everything.
+
+### Consistent Interface
+
+```bash
+# Install a plugin
+asdf plugin add nodejs
+
+# Install a version
+asdf install nodejs latest
+
+# Set global version
+asdf global nodejs latest
+
+# Set local version (per-project)
+asdf local nodejs 18.0.0
+```
+
+### Plugin Ecosystem
+
+Over **500+ plugins** for different languages and tools.
+
+## Features
+
+**Search Plugins**
+- Full-text search across plugin names and descriptions
+- Filter by language/tool category
+- View plugin details and GitHub links
+
+**Language Filtering**
+- Node.js
+- Python
+- Ruby
+- Go
+- Rust
+- Java
+- And many more...
+
+**Proven Validation**
+- Plugin data validated with formal proofs
+- URL validation using ProvenSafeUrl
+- Type-safe filtering and search
+- No runtime errors possible
+
+## Popular Plugins
+
+| Plugin | Language | Use Case |
+|--------|----------|----------|
+| nodejs | JavaScript | Node.js runtime |
+| python | Python | Python interpreter |
+| ruby | Ruby | Ruby interpreter |
+| golang | Go | Go compiler |
+| rust | Rust | Rust toolchain |
+| java | Java | Java JDK |
+| kubectl | DevOps | Kubernetes CLI |
+| terraform | DevOps | Infrastructure as Code |
+
+## How to Use
+
+1. **Install asdf**
+   ```bash
+   git clone https://github.com/asdf-vm/asdf.git ~/.asdf
+   ```
+
+2. **Browse plugins** on this site
+
+3. **Install a plugin**
+   ```bash
+   asdf plugin add <plugin-name>
+   ```
+
+4. **Install a version**
+   ```bash
+   asdf install <plugin-name> <version>
+   ```
+
+5. **Use the version**
+   ```bash
+   asdf global <plugin-name> <version>
+   ```
+
+## Learn More
+
+- [asdf Documentation](https://asdf-vm.com/guide/getting-started.html)
+- [Plugin List (GitHub)](https://github.com/asdf-vm/asdf-plugins)
+- [Create Your Own Plugin](https://asdf-vm.com/plugins/create.html)
+
+---
+
+*ASDF Plugin Directory - Find the right plugin for your tools.*

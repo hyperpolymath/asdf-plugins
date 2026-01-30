@@ -1,4 +1,20 @@
-#Start(1769800611781)
+#Start(1769803546924)
+
+  Warning number 3
+  /var/mnt/eclipse/repos/asdf-plugins/src/ProvenSafeUrl.res:36:47-55
+
+  34 ┆ 
+  35 ┆ @module("proven/safe_url") @scope("SafeUrl")
+  36 ┆ external getQueryParams: string => jsResult<Js.Dict.t<string>> = "getQu
+     ┆ eryParams"
+  37 ┆ 
+  38 ┆ @module("proven/safe_url") @scope("SafeUrl")
+
+  deprecated: Js.Dict.t
+  Use `dict` directly instead.
+
+  This can be automatically migrated by the ReScript migration tool. Run `rescript-tools migrate-all <project-root>` to run all automatic migrations available in your project, or `rescript-tools migrate <file>` to migrate a single file.
+
 
   Warning number 3
   /var/mnt/eclipse/repos/asdf-plugins/src/Tea.res:21:50-62
@@ -119,20 +135,4 @@ Fix this by:
 - Prepending the variable name with `_` (like `_langStr`) to ignore that the variable is unused.
 - Using the variable somewhere.
 
-
-  Warning number 3
-  /var/mnt/eclipse/repos/asdf-plugins/src/ProvenSafeUrl.res:36:47-55
-
-  34 ┆ 
-  35 ┆ @module("proven/safe_url") @scope("SafeUrl")
-  36 ┆ external getQueryParams: string => jsResult<Js.Dict.t<string>> = "getQu
-     ┆ eryParams"
-  37 ┆ 
-  38 ┆ @module("proven/safe_url") @scope("SafeUrl")
-
-  deprecated: Js.Dict.t
-  Use `dict` directly instead.
-
-  This can be automatically migrated by the ReScript migration tool. Run `rescript-tools migrate-all <project-root>` to run all automatic migrations available in your project, or `rescript-tools migrate <file>` to migrate a single file.
-
-#Done(1769800611849)
+#Done(1769803546967)
